@@ -1,0 +1,14 @@
+Table: githubproject
+----------+--------------+------+-----+---------+---------
+ Field    | Type         | Null | Key | Default | Remarks 
+----------+--------------+------+-----+---------+---------
+ ID       | BIGINT(19)   | NO   | PRI |         | ID      
+ URL      | VARCHAR(200) | YES  |     |         | URL地址   
+ NAME     | VARCHAR(200) | YES  |     |         | 项目名称    
+ LANG     | VARCHAR(200) | YES  |     |         | 使用语言    
+ COMMENT  | VARCHAR(200) | YES  |     |         | 备注      
+ UPDATE   | VARCHAR(20)  | YES  |     |         | 添加日期    
+ DESCRIPT | TEXT(65535)  | YES  |     |         |         
+ STAR     | INT(10)      | YES  |     |         |         
+----------+--------------+------+-----+---------+---------
+
