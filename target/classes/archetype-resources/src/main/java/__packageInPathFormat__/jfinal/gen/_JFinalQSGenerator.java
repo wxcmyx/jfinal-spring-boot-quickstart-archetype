@@ -39,7 +39,7 @@ public class _JFinalQSGenerator {
 
         // 创建生成器
         DataSource dataSource = getMasterDataSource();
-        org.sidao.jfinal.gen.MyGenerator generator = new org.sidao.jfinal.gen.MyGenerator(dataSource, baseModelPackageName, baseModelOutputDir, modelPackageName, modelOutputDir);
+        MyGenerator generator = new MyGenerator(dataSource, baseModelPackageName, baseModelOutputDir, modelPackageName, modelOutputDir);
         // 添加不需要生成的表名
         configExcludingTable(generator);
         // 设置是否在 Model 中生成 dao 对象

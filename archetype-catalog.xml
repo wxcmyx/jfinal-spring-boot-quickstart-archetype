@@ -6,7 +6,7 @@
         <archetype>
             <groupId>com.github.spring-boot-jfinal-archetypes</groupId>
             <artifactId>spring-boot-jfinal-quickstart</artifactId>
-            <version>2.0.1</version>
+            <version>2.0.2</version>
             <repository></repository>
             <description>Archetype for creating Spring Boot jfinal application</description>
         </archetype>
