@@ -14,8 +14,8 @@ Installation
 To install the archetype in your local repository execute following commands:
 
 ```sh
-$ git clone https://github.com/wxcmyx/spring-boot-final-quickstart-archetype.git
-$ cd spring-boot-jfinal-quickstart-archetype
+$ git clone https://github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git
+$ cd jfinal-spring-boot-quickstart-archetype
 $ mvn clean install
 ```
 
@@ -24,9 +24,9 @@ Create a project
 
 ```sh
 $ mvn archetype:generate \
-     -DarchetypeGroupId=com.github.spring-boot-jfinal-archetypes \
-     -DarchetypeArtifactId=spring-boot-jfinal-quickstart \
-     -DarchetypeVersion=2.0.1 \
+     -DarchetypeGroupId=com.github.jfinal-spring-boot-archetypes \
+     -DarchetypeArtifactId=jfinal-spring-boot-quickstart \
+     -DarchetypeVersion=2.0.2 \
      -DgroupId=xxxxx \
      -Dpackage=com.company \
      -DartifactId=xxxxxx \
