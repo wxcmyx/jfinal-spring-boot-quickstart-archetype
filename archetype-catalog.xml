@@ -4,8 +4,8 @@
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd">
     <archetypes>
         <archetype>
-            <groupId>com.github.spring-boot-jfinal-archetypes</groupId>
-            <artifactId>spring-boot-jfinal-quickstart</artifactId>
+            <groupId>com.github.jfinal-spring-boot-archetypes</groupId>
+            <artifactId>jfinal-spring-boot-quickstart</artifactId>
             <version>2.0.2</version>
             <repository></repository>
             <description>Archetype for creating Spring Boot jfinal application</description>

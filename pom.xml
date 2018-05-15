@@ -2,14 +2,14 @@
          xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>com.github.spring-boot-jfinal-archetypes</groupId>
-    <artifactId>spring-boot-jfinal-quickstart</artifactId>
+    <groupId>com.github.jfinal-spring-boot-archetypes</groupId>
+    <artifactId>jfinal-spring-boot-quickstart</artifactId>
     <version>2.0.2</version>
     <packaging>maven-archetype</packaging>
 
     <name>Spring Boot Maven Archetype: Quickstart</name>
     <description>Archetype for creating Spring Boot Jfinal application</description>
-    <url>https://github.com/wxcmyx/spring-boot-jfinal-quickstart-archetype</url>
+    <url>https://github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype</url>
 
     <!-- Properties -->
     <properties>

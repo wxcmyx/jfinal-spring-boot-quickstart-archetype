@@ -28,7 +28,7 @@ public class _JFinalQSGenerator {
 
     public static void main(String[] args) {
         // base model 所使用的包名
-        String baseModelPackageName = "${package}.jfinal.model";
+        String baseModelPackageName = "${package}.jfinal.model.base";
         // base model 文件保存路径
         String baseModelOutputDir = PathKit.getWebRootPath() + "/src/main/java/${package}/jfinal/model/base";
 
