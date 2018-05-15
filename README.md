@@ -1,4 +1,4 @@
-Spring Boot Jfinal Quickstart Maven Archetype
+Jfinal Spring Boot Quickstart Maven Archetype
 =========================================
 
 [![Build Status](https://travis-ci.org/suzel/spring-boot-quickstart-archetype.svg?branch=master)](https://travis-ci.org/suzel/spring-boot-quickstart-archetype)
@@ -45,7 +45,7 @@ Test on the browser
 -------------------
 
 ```sh
-http://localhost:8080/
+http://localhost:8080/api/hello
 ```
 
 Note: No additional services are required in order to start the application.
