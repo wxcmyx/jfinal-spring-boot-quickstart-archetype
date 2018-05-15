@@ -49,3 +49,7 @@ http://localhost:8080/
 ```
 
 Note: No additional services are required in order to start the application.
+
+Demo
+---------
+github:<a href="https://github.com/wxcmyx/best-practice-java/tree/master/springboot-jfinal">jfinal-springboot</a>
