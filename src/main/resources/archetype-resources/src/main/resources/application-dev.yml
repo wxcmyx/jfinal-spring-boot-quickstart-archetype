@@ -8,7 +8,12 @@ spring:
       url: jdbc:mysql://127.0.0.1:3306/pachong?useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull
       username: root
       password: 8910WANg!
-
+  redis:
+    host: localhost
+    port: 6379
+  data:
+    mongodb:
+      uri: mongodb://uid:123456@192.168.37.142:27017/uid
 # See: https://github.com/javamelody/javamelody/wiki/UserGuide#6-optional-parameters
 javamelody:
   #advisor-auto-proxy-creator-enabled: false
@@ -18,6 +23,22 @@ javamelody:
     authorized-users: admin:admin
     storage-directory: /tmp/javamelody
     #monitoring-path: /admin/performance
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,info #, beans, env, mappings, metrics, jolokia, heapdump, configprops, loggers
+  endpoint:
+    health:
+      show-details: ALWAYS
+      #show-details: WHEN_AUTHORIZED
+    env:
+      keys-to-sanitize: java.vm.name, local.server.port
+    jolokia:
+      config:
+        listenForHttpService: true
+        debug: true
 
 swagger:
 #  enabled: false

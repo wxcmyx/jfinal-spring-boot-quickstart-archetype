@@ -4,7 +4,7 @@
 
     <groupId>com.github.jfinal-spring-boot-archetypes</groupId>
     <artifactId>jfinal-spring-boot-quickstart</artifactId>
-    <version>2.0.2</version>
+    <version>2.0.4</version>
     <packaging>maven-archetype</packaging>
 
     <name>Spring Boot Maven Archetype: Quickstart</name>

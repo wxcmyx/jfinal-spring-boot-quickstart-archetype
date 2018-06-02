@@ -1,6 +1,6 @@
 package ${package}.web.controller;
 
-import org.sidao.springboot.web.rest.Result;
+import ${package}.web.rest.Result;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;

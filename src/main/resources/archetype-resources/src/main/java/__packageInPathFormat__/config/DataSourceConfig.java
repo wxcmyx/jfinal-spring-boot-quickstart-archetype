@@ -2,6 +2,7 @@ package ${package}.config;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.zaxxer.hikari.HikariDataSource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Bean;
@@ -16,6 +17,11 @@ import javax.sql.DataSource;
  */
 @Configuration
 public class DataSourceConfig {
+
+    @Value("${spring.redis.host}")
+    private String redisHost;
+    @Value("${spring.redis.port}")
+    private int redisPort;
 
     @Bean
     @Primary
