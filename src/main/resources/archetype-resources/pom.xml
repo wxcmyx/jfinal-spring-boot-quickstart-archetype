@@ -41,10 +41,8 @@
         <SpingDateRedis.version>2.0.6.RELEASE</SpingDateRedis.version>
         <mysql.version>5.1.20</mysql.version>
         <HikariCP.version>2.7.8</HikariCP.version>
-        <Swagger.version>1.7.0.RELEASE</Swagger.version>
+        <Swagger.version>2.0.0.RELEASE</Swagger.version>
         <Junit.version>4.12</Junit.version>
-        <MybatisMapper.version>2.0.2</MybatisMapper.version>
-        <MybatisPageHelper.version>1.2.5</MybatisPageHelper.version>
         <Lombok.version>1.16.20</Lombok.version>
         <Contiperf.version>2.3.4</Contiperf.version>
         <Jaxb.version>2.3.0</Jaxb.version>
@@ -53,6 +51,8 @@
         <Fst.version>2.57</Fst.version>
         <Jedis.version>2.9.0</Jedis.version>
         <Servlet.version>3.1.0</Servlet.version>
+        <logstash.version>5.1</logstash.version>
+        <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
     </properties>
 
     <!-- Dependencies -->
@@ -90,11 +90,6 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-jdbc</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>${MybatisMapper.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework</groupId>
@@ -236,11 +231,28 @@
         </dependency>
         <!--swagger-->
         <dependency>
-            <groupId>com.spring4all</groupId>
-            <artifactId>swagger-spring-boot-starter</artifactId>
+            <groupId>org.sidao</groupId>
+            <artifactId>swagger2-spring-boot-starter</artifactId>
             <version>${Swagger.version}</version>
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-configuration-processor</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <!--日志输出到kafka-->
+        <dependency>
+            <groupId>net.logstash.logback</groupId>
+            <artifactId>logstash-logback-encoder</artifactId>
+            <version>${logstash.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.github.danielwegener</groupId>
+            <artifactId>logback-kafka-appender</artifactId>
+            <version>${logback-kafka-appender.version}</version>
+            <scope>runtime</scope>
+        </dependency>
     </dependencies>
 
     <!-- Repositories -->
@@ -300,28 +312,6 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
-            </plugin>
-            <plugin>
-                <groupId>org.mybatis.generator</groupId>
-                <artifactId>mybatis-generator-maven-plugin</artifactId>
-                <version>1.3.2</version>
-                <configuration>
-                    <configurationFile>${basedir}/src/main/resources/generator/generatorConfig.xml</configurationFile>
-                    <overwrite>false</overwrite>
-                    <verbose>true</verbose>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>${mysql.version}</version>
-                    </dependency>
-                    <dependency>
-                        <groupId>tk.mybatis</groupId>
-                        <artifactId>mapper-generator</artifactId>
-                        <version>1.0.0</version>
-                    </dependency>
-                </dependencies>
             </plugin>
         </plugins>
         <resources>

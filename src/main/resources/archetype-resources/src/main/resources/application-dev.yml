@@ -23,6 +23,10 @@ javamelody:
     authorized-users: admin:admin
     storage-directory: /tmp/javamelody
     #monitoring-path: /admin/performance
+# 输出到kafka的topic名称
+logback:
+  kafka:
+    logName: test
 
 management:
   endpoints:
@@ -52,7 +56,7 @@ swagger:
     name:  我
 #    url:  http://blog.didispace.com
 #    email:  dyc87112@qq.com
-  base-package:  org.sidao.springboot.web
+  base-package:  ${package}.web
 
 #  ignored-parameter-types[0]:  com.didispace.demo.User
 

@@ -1,4 +1,4 @@
-package ${package}.common;
+package ${package}.web.util;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;
