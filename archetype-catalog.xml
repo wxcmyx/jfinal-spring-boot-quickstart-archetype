@@ -4,7 +4,7 @@
     xsi:schemaLocation="http://maven.apache.org/plugins/maven-archetype-plugin/archetype-catalog/1.0.0 http://maven.apache.org/xsd/archetype-catalog-1.0.0.xsd">
     <archetypes>
         <archetype>
-            <groupId>com.github.jfinal-spring-boot-archetypes</groupId>
+            <groupId>org.sidao</groupId>
             <artifactId>jfinal-spring-boot-quickstart</artifactId>
             <version>2.0.7</version>
             <repository></repository>

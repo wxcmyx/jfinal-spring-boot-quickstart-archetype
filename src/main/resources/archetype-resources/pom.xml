@@ -37,6 +37,7 @@
 
         <javamelody.version>1.73.1</javamelody.version>
         <jfinal.version>3.4</jfinal.version>
+        <jfinal-ext3.version>3.0.6</jfinal-ext3.version>
         <guava.version>24.1-jre</guava.version>
         <SpingDateRedis.version>2.0.6.RELEASE</SpingDateRedis.version>
         <mysql.version>5.1.20</mysql.version>
@@ -53,6 +54,8 @@
         <Servlet.version>3.1.0</Servlet.version>
         <logstash.version>5.1</logstash.version>
         <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
+        <shiro.version>1.4.0</shiro.version>
+
     </properties>
 
     <!-- Dependencies -->
@@ -205,6 +208,11 @@
             <groupId>com.jfinal</groupId>
             <artifactId>jfinal</artifactId>
             <version>${jfinal.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.jfinal</groupId>
+            <artifactId>jfinal-ext3</artifactId>
+            <version>${jfinal-ext3.version}</version>
         </dependency>
         <!--监控组件-->
         <dependency>
