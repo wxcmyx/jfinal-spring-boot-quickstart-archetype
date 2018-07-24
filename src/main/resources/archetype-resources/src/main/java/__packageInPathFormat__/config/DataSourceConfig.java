@@ -9,6 +9,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
+import ${package}.jfinal.model._MappingKit;
+import ${package}.jfinal.model._MappingKit2;
 
 import javax.sql.DataSource;
 
@@ -54,7 +56,7 @@ public class DataSourceConfig {
     @DependsOn("ds1")
     public ActiveRecordPlugin activeFirstDatasource() {
         ActiveRecordPlugin plugin = new ActiveRecordPlugin("ds1",firstDataSource());
-        org.sidao.jfinal.model._MappingKit.mapping(plugin);
+        _MappingKit.mapping(plugin);
         plugin.start();
         return plugin;
     }
@@ -62,7 +64,7 @@ public class DataSourceConfig {
     @DependsOn("ds2")
     public ActiveRecordPlugin activeSecordDatasource() {
         ActiveRecordPlugin plugin = new ActiveRecordPlugin("ds2",secondDataSource());
-        org.sidao.jfinal.model._MappingKit2.mapping(plugin);
+        _MappingKit2.mapping(plugin);
         plugin.start();
         return plugin;
     }

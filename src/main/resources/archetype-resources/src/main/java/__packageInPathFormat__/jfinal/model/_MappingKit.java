@@ -1,4 +1,4 @@
-package org.sidao.jfinal.model;
+package ${package}.jfinal.model;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 
