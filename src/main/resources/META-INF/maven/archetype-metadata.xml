@@ -22,6 +22,29 @@
         </fileSet>
         <fileSet filtered="true" encoding="UTF-8">
             <directory>src/main/resources</directory>
+            <includes>
+                <include>**/*.yml</include>
+                <include>**/*.xml</include>
+                <include>**/*.properties</include>
+            </includes>
+        </fileSet>
+        <fileSet encoding="UTF-8">
+            <directory>src/main/resources/</directory>
+            <includes>
+                <include>**/*.jpg</include>
+                <include>**/*.png</include>
+                <include>**/*.js</include>
+                <include>**/*.html</include>
+                <include>**/*.ico</include>
+                <include>**/*.mp4</include>
+                <include>**/*.css</include>
+                <include>**/*.gif</include>
+                <include>**/*.eot</include>
+                <include>**/*.svg</include>
+                <include>**/*.ttf</include>
+                <include>**/*.woff</include>
+                <include>**/*.json</include>
+            </includes>
         </fileSet>
         <fileSet filtered="true">
             <directory>src/test/java</directory>

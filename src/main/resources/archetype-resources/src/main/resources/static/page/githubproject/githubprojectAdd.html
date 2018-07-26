@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title></title>
+	<meta name="renderer" content="webkit">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<meta name="apple-mobile-web-app-status-bar-style" content="black">
+	<meta name="apple-mobile-web-app-capable" content="yes">
+	<meta name="format-detection" content="telephone=no">
+	<link rel="stylesheet" href="../../layui/css/layui.css" media="all" />
+	<style>
+		.layui-form-label{
+			width:100px;
+		}
+		.layui-input-block{
+			margin-left: 130px;
+		}
+		body {
+			padding: 40px 0 0 120px
+		}
+		img{
+			width: auto;   
+			height: auto;   
+			max-width: 100%; 
+			max-height: 100%;
+		}
+		.imgDiv{
+			width:100px;
+			/* height:100px; */
+		}
+		#uploadFileShow{
+			display:none;
+		}
+	</style>
+</head>
+<body class="childrenBody">
+	<form class="layui-form" method="post" id="githubprojectAdd">
+		<div class="layui-form-item">
+			<label class="layui-form-label">ID<span style="color:red"> *</span></label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.ID" id="id" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入ID">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">URL地址</label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.URL" id="url" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入URL地址">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">项目名称</label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.NAME" id="name" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入项目名称">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">使用语言</label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.LANG" id="lang" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入使用语言">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">备注</label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.COMMENT" id="comment" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入备注">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<label class="layui-form-label">添加日期</label>
+			<div class="layui-input-inline">
+				<input type="text" name="githubproject.UPDATE" id="update" class="layui-input brand_name" lay-verify="required|phone" placeholder="请输入添加日期">
+			</div>
+		</div>
+		<div class="layui-form-item">
+			<div class="layui-input-block">
+				<button class="layui-btn" lay-submit="" lay-filter="sub">立即提交</button>
+				<!-- <button type="reset"  class="layui-btn layui-btn-primary">重置</button> -->
+		    </div>
+		</div>
+	</form>
+	<script type="text/javascript" src="../../layui/layui.js"></script>
+	<script type="text/javascript" src="/page/githubproject/githubprojectAdd.js"></script>
+</body>
+</html>
