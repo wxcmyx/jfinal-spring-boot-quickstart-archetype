@@ -26,7 +26,7 @@ Create a project
 $ mvn archetype:generate \
      -DarchetypeGroupId=org.sidao \
      -DarchetypeArtifactId=jfinal-spring-boot-quickstart \
-     -DarchetypeVersion=2.0.7 \
+     -DarchetypeVersion=2.0.9 \
      -DgroupId=xxxxx \
      -Dpackage=com.company \
      -DartifactId=xxxxxx \
