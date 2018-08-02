@@ -9,10 +9,12 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
+        <module name="jfinal-spring-boot-quickstart" />
         <module name="spring-boot-jfinal-quickstart" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="jfinal-spring-boot-quickstart" target="1.5" />
       <module name="spring-boot-jfinal-quickstart" target="1.5" />
     </bytecodeTargetLevel>
   </component>
