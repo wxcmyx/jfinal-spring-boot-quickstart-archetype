@@ -1,10 +1,9 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
 
-    <groupId>org.sidao</groupId>
+    <groupId>com.wixct</groupId>
     <artifactId>jfinal-spring-boot-quickstart</artifactId>
-    <version>2.0.9</version>
+    <version>2.1.1-SNAPSHOT</version>
     <packaging>maven-archetype</packaging>
 
     <name>Spring Boot Maven Archetype: Quickstart</name>
@@ -25,11 +24,17 @@
         </license>
     </licenses>
     <scm>
-        <url>git:github.com:wxcmyx/jfinal-spring-boot-quickstart-archetype</url>
-        <connection>scm:git:github.com:wxcmyx/jfinal-spring-boot-quickstart-archetype.git</connection>
-        <developerConnection>scm:git:github.com:wxcmyx/jfinal-spring-boot-quickstart-archetype.git</developerConnection>
-    </scm>
-
+        <url>scm:git:git@github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git</url>
+        <connection>scm:git:git@github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git</connection>
+        <developerConnection>https://github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype</developerConnection>
+      <tag>HEAD</tag>
+  </scm>
+    <!--<scm>-->
+        <!--<connection>scm:git:git@github.com:xiepengchong/lint-cleaner-plugin.git</connection>-->
+        <!--<developerConnection>scm:git:git@github.com:xiepengchong/lint-cleaner-plugin.git</developerConnection>-->
+        <!--<url>https://github.com/xiepengchong/lint-cleaner-plugin</url>-->
+        <!--<tag>lint-cleaner-plugin-1.0.1</tag>-->
+    <!--</scm>-->
     <developers>
         <developer>
             <name>xiaochao Wang</name>
