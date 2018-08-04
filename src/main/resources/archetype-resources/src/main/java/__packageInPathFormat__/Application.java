@@ -7,10 +7,12 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.builder.SpringApplicationBuilder;
 import org.springframework.boot.web.servlet.support.SpringBootServletInitializer;
 import org.springframework.scheduling.annotation.EnableScheduling;
+import org.springframework.session.data.redis.config.annotation.web.http.EnableRedisHttpSession;
 
 @EnableSwagger2Doc
 @EnableScheduling
 @SpringBootApplication
+@EnableRedisHttpSession
 public class Application  extends SpringBootServletInitializer {
 
     @Override

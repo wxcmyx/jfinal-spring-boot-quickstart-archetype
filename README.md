@@ -7,10 +7,34 @@ Jfinal Spring Boot Quickstart Maven Archetype
 Summary
 -------
 The project is a Maven archetype for Spring Boot web application.
-后续更新分拆成两个版本，专注rest服务的
-jfinal-rest-spring-boot-quickstart-archetype
-和整和了layui的
+
+后续更新分拆成两个版本：<br>
+专注rest服务的<br>
+jfinal-spring-boot-quickstart-archetype<br>
+整和了layui的<br>
 jfinal-cms-spring-boot-quickstart-archetype
+
+Descript
+-------
+整合框架：<br>
+
+Spring-boot 2.0.3 <br>
+Jfinal 3.4<br>
+Jfinal-ext 3.0.6<br>
+Shiro - Shiro-spring-boot-strator-1.4.0<br>
+Redis - Lettuce-5.0.4<br>
+Mongo-java-driver-3.6.4<br>
+Mysql-connector-java-5.1.20<br>
+Mysql - HikariCP-2.7.8<br>
+Swagger - Swagger2-spring-boot-strater-2.0.0<br>
+Javamelody - javamelody-spring-boot-starter-1.73.1<br>
+
+Update log
+-------------------
+v2.1.2 
+1.专注rest微服务架构，专注最佳实践
+2.加入shiro认证
+3.加入session缓存
 
 Installation
 ------------
@@ -28,9 +52,9 @@ Create a project
 
 ```sh
 $ mvn archetype:generate \
-     -DarchetypeGroupId=org.sidao \
+     -DarchetypeGroupId=com.wixct \
      -DarchetypeArtifactId=jfinal-spring-boot-quickstart \
-     -DarchetypeVersion=2.0.9 \
+     -DarchetypeVersion=2.1.2 \
      -DgroupId=xxxxx \
      -Dpackage=com.company \
      -DartifactId=xxxxxx \
@@ -54,6 +78,10 @@ http://localhost:8080/api/hello
 
 Note: No additional services are required in order to start the application.
 
-Demo
+Document
 ---------
-github:<a href="https://github.com/wxcmyx/best-practice-java/tree/master/springboot-jfinal">jfinal-springboot</a>
+修改shiro权限认证方式，可能需要修改的几个包：<br>
+xx.config<br>
+xx.domain<br>
+xx.security<br>
+xx.service

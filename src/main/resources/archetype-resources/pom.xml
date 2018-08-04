@@ -40,6 +40,7 @@
         <jfinal-ext3.version>3.0.6</jfinal-ext3.version>
         <guava.version>24.1-jre</guava.version>
         <SpingDateRedis.version>2.0.6.RELEASE</SpingDateRedis.version>
+        <SpingDateSessionRedis.version>2.0.4.RELEASE</SpingDateSessionRedis.version>
         <mysql.version>5.1.20</mysql.version>
         <HikariCP.version>2.7.8</HikariCP.version>
         <Swagger.version>2.0.0.RELEASE</Swagger.version>
@@ -50,7 +51,6 @@
         <CommonPool2.version>2.5.0</CommonPool2.version>
         <CommonLang3.version>3.7</CommonLang3.version>
         <Fst.version>2.57</Fst.version>
-        <Jedis.version>2.9.0</Jedis.version>
         <Servlet.version>3.1.0</Servlet.version>
         <logstash.version>5.1</logstash.version>
         <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
@@ -108,6 +108,12 @@
             <artifactId>mysql-connector-java</artifactId>
             <version>${mysql.version}</version>
         </dependency>
+        <!--权限认证-->
+        <dependency>
+            <groupId>org.apache.shiro</groupId>
+            <artifactId>shiro-spring-boot-web-starter</artifactId>
+            <version>${shiro.version}</version>
+        </dependency>
         <!--cache--><!--redis依赖添加-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -120,9 +126,9 @@
             </exclusions>
         </dependency>
         <dependency>
-            <groupId>redis.clients</groupId>
-            <artifactId>jedis</artifactId>
-            <version>${Jedis.version}</version>
+            <groupId>org.springframework.session</groupId>
+            <artifactId>spring-session-data-redis</artifactId>
+            <version>${SpingDateSessionRedis.version}</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>

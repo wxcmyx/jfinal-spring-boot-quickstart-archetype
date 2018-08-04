@@ -3,7 +3,7 @@
 
     <groupId>com.wixct</groupId>
     <artifactId>jfinal-spring-boot-quickstart</artifactId>
-    <version>2.1.1-SNAPSHOT</version>
+    <version>2.1.2</version>
     <packaging>maven-archetype</packaging>
 
     <name>Spring Boot Maven Archetype: Quickstart</name>
