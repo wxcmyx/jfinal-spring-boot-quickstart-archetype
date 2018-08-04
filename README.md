@@ -7,6 +7,10 @@ Jfinal Spring Boot Quickstart Maven Archetype
 Summary
 -------
 The project is a Maven archetype for Spring Boot web application.
+后续更新分拆成两个版本，专注rest服务的
+jfinal-rest-spring-boot-quickstart-archetype
+和整和了layui的
+jfinal-cms-spring-boot-quickstart-archetype
 
 Installation
 ------------
