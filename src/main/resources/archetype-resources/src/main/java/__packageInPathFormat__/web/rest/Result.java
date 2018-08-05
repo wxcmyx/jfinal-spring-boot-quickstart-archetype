@@ -1,4 +1,4 @@
-${package}.web.rest;
+package ${package}.web.rest;
 
 public class Result {
     public static final int DEFAULT_SUCC_CODE = 0;
