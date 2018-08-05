@@ -31,9 +31,9 @@ Javamelody - javamelody-spring-boot-starter-1.73.1<br>
 
 Update log
 -------------------
-v2.1.2 
-1.专注rest微服务架构，专注最佳实践
-2.加入shiro认证
+v2.1.2 <br>
+1.专注rest微服务架构，专注最佳实践<br>
+2.加入shiro认证<br>
 3.加入session缓存
 
 Installation
@@ -54,7 +54,7 @@ Create a project
 $ mvn archetype:generate \
      -DarchetypeGroupId=com.wixct \
      -DarchetypeArtifactId=jfinal-spring-boot-quickstart \
-     -DarchetypeVersion=2.1.2 \
+     -DarchetypeVersion=2.1.3 \
      -DgroupId=xxxxx \
      -Dpackage=com.company \
      -DartifactId=xxxxxx \

@@ -1,4 +1,4 @@
-package com.longfor.omo.web.rest;
+${package}.web.rest;
 
 public class Result {
     public static final int DEFAULT_SUCC_CODE = 0;
