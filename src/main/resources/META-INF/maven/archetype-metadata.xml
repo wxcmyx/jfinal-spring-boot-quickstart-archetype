@@ -12,6 +12,7 @@
                 <include>README.md</include>
                 <include>LICENSE</include>
                 <include>Procfile</include>
+                <include>release.properties</include>
             </includes>
         </fileSet>
         <fileSet filtered="true">

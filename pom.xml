@@ -24,11 +24,11 @@
         </license>
     </licenses>
     <scm>
+        <tag>HEAD</tag>
         <url>scm:git:git@github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git</url>
         <connection>scm:git:git@github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git</connection>
         <developerConnection>https://github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype</developerConnection>
-      <tag>HEAD</tag>
-  </scm>
+    </scm>
     <!--<scm>-->
         <!--<connection>scm:git:git@github.com:xiepengchong/lint-cleaner-plugin.git</connection>-->
         <!--<developerConnection>scm:git:git@github.com:xiepengchong/lint-cleaner-plugin.git</developerConnection>-->
@@ -85,6 +85,14 @@
                 <plugin>
                     <artifactId>maven-resources-plugin</artifactId>
                     <version>${maven.maven-resources-plugin.version}</version>
+                </plugin>
+                <plugin>
+                    <groupId>org.apache.maven.plugins</groupId>
+                    <artifactId>maven-scm-plugin</artifactId>
+                    <version>1.8.1</version>
+                    <configuration>
+                        <connectionType>connection</connectionType>
+                    </configuration>
                 </plugin>
             </plugins>
         </pluginManagement>
