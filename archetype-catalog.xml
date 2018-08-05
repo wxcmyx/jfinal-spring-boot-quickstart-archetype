@@ -6,7 +6,7 @@
         <archetype>
             <groupId>org.sidao</groupId>
             <artifactId>jfinal-spring-boot-quickstart</artifactId>
-            <version>2.1.4</version>
+            <version>2.1.5-SNAPSHOT</version>
             <repository></repository>
             <description>Archetype for creating Spring Boot jfinal application</description>
         </archetype>
