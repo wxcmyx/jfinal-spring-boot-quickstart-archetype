@@ -36,6 +36,14 @@ v2.1.2 <br>
 2.加入shiro认证<br>
 3.加入session缓存
 
+Pre Installation(optional)
+------------
+此选项可以加快构建速度
+```
+http://repo2.maven.org/maven2/archetype-catalog.xml
+```
+将archetype-catalog.xml文件放到~/用户名/.m2/ 目录下
+
 Installation
 ------------
 
@@ -60,6 +68,10 @@ $ mvn archetype:generate \
      -DartifactId=xxxxxx \
      -Dversion=1.0.0-SNAPSHOT \
      -DinteractiveMode=false
+```
+如果使用了Pre Installation，需要在上面代码的基础上再补充上
+```
+-DarchetypeCatalog=local
 ```
 
 Run the project
