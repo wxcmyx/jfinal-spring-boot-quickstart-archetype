@@ -1,6 +1,6 @@
 package ${package}.web.rest;
 
-public class Result {
+public class Result<T> {
     public static final int DEFAULT_SUCC_CODE = 0;
     public static final int DEFAULT_FAIL_CODE = 1;
     /**
@@ -22,7 +22,7 @@ public class Result {
     /**
      * 其他数据
      */
-    private Object data;
+    private T data;
 
     /**
      * 成功
@@ -509,11 +509,11 @@ public class Result {
         return this;
     }
 
-    public Object getData() {
+    public T getData() {
         return data;
     }
 
-    public Result setData(Object data) {
+    public Result setData(T data) {
         this.data = data;
         return this;
     }
