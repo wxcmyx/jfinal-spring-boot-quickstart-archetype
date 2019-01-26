@@ -17,7 +17,7 @@ public class WebMvcConfigurer {
     /**
      * 设置错误页面
      */
-    private static class MyErrorPageRegistrar implements ErrorPageRegistrar {
+    private static class MyErrorPageRegistrar extends WebMvcConfigurationSupport {
 
         @Override
         public void registerErrorPages(ErrorPageRegistry registry) {
@@ -61,22 +61,20 @@ public class WebMvcConfigurer {
      * 配置cors跨域访问
      * @return
      */
-    @Bean
-    public WebMvcConfigurer corsConfigurer() {
-        return new WebMvcConfigurer() {
-            public void addCorsMappings(CorsRegistry registry) {
-                registry.addMapping("/api/**");
-            }
-        };
+    @Override
+    public void addCorsMappings(CorsRegistry registry){
+        registry.addMapping("/**")
+            .allowedOrigins("*")
+            .allowCredentials(true);
     }
 
     /**
      * 注册错误页面
      * @return
      */
-    @Bean
-    public ErrorPageRegistrar errorPageRegistrar(){
-        return new MyErrorPageRegistrar();
-    }
+//    @Bean
+//    public ErrorPageRegistrar errorPageRegistrar(){
+//        return new MyErrorPageRegistrar();
+//    }
 
 }

@@ -9,7 +9,7 @@
     <parent>
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
-        <version>2.0.3.RELEASE</version>
+        <version>2.1.1.RELEASE</version>
         <relativePath/><!-- lookup parent from repository -->
     </parent>
 
@@ -35,12 +35,15 @@
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <javamelody.version>1.73.1</javamelody.version>
+        <SpingDateRedis.version>2.1.1.RELEASE</SpingDateRedis.version>
+        <SpingDateSessionRedis.version>2.1.1.RELEASE</SpingDateSessionRedis.version>
+        <springboot.maven.version>2.1.1.RELEASE</springboot.maven.version>
+
+        <javamelody.version>1.75.0</javamelody.version>
         <jfinal.version>3.4</jfinal.version>
         <jfinal-ext3.version>3.0.6</jfinal-ext3.version>
         <guava.version>24.1-jre</guava.version>
-        <SpingDateRedis.version>2.0.6.RELEASE</SpingDateRedis.version>
-        <SpingDateSessionRedis.version>2.0.4.RELEASE</SpingDateSessionRedis.version>
+
         <mysql.version>5.1.20</mysql.version>
         <HikariCP.version>2.7.8</HikariCP.version>
         <Swagger.version>2.0.0.RELEASE</Swagger.version>
@@ -53,8 +56,9 @@
         <Fst.version>2.57</Fst.version>
         <Servlet.version>3.1.0</Servlet.version>
         <logstash.version>5.1</logstash.version>
+        <jsets-shiro.version>1.0.4</jsets-shiro.version>
         <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
-        <shiro.version>1.4.0</shiro.version>
+        <jsoup.version>1.11.3</jsoup.version>
 
     </properties>
 
@@ -109,10 +113,15 @@
             <version>${mysql.version}</version>
         </dependency>
         <!--权限认证-->
+        <!--<dependency>-->
+            <!--<groupId>org.apache.shiro</groupId>-->
+            <!--<artifactId>shiro-spring-boot-web-starter</artifactId>-->
+            <!--<version>${shiro.version}</version>-->
+        <!--</dependency>-->
         <dependency>
-            <groupId>org.apache.shiro</groupId>
-            <artifactId>shiro-spring-boot-web-starter</artifactId>
-            <version>${shiro.version}</version>
+            <groupId>org.sidao</groupId>
+            <artifactId>jsets-shiro-spring-boot-starter</artifactId>
+            <version>${jsets-shiro.version}</version>
         </dependency>
         <!--cache--><!--redis依赖添加-->
         <dependency>
@@ -317,6 +326,27 @@
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jar-plugin</artifactId>
+                <configuration>
+                    <classesDirectory>target/classes/</classesDirectory>
+                    <archive>
+                        <manifest>
+                            <!-- 主函数的入口 -->
+                            <mainClass>com.wixct.pachong.Application</mainClass>
+                            <!-- 打包时 MANIFEST.MF文件不记录的时间戳版本 -->
+                            <useUniqueVersions>false</useUniqueVersions>
+                            <addClasspath>true</addClasspath>
+                            <classpathPrefix>lib/</classpathPrefix>
+                        </manifest>
+                        <manifestEntries>
+                            <Class-Path>.</Class-Path>
+                        </manifestEntries>
+                    </archive>
+                </configuration>
+            </plugin>
+
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-resources-plugin</artifactId>
                 <configuration>
                     <encoding>UTF-8</encoding>
@@ -326,6 +356,9 @@
             <plugin>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
+                <configuration>
+                    <mainClass>com.wixct.pachong.Application</mainClass>
+                </configuration>
             </plugin>
         </plugins>
         <resources>

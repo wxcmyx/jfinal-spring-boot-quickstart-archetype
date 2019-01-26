@@ -73,9 +73,23 @@
     <logger name="jdbc.sqlonly" level="INFO"/>
 
     <springProfile name="prod">
+        <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+            <file>${LOG_HOME}/pachong.log</file>
+            <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+                <FileNamePattern>${LOG_HOME}/pachong.%d{yyyy-MM-dd}.log.gz
+                </FileNamePattern>
+                <!-- keep 20 days' worth of history -->
+                <maxHistory>20</maxHistory>
+            </rollingPolicy>
+            <encoder>
+                <!-- %-40(%-35logger{35}:%-4line) -->
+                <Pattern>[%date{yyyy-MM-dd HH:mm:ss}] [%-5level][%thread] [%logger:%line] --%mdc{client} %msg%n</Pattern>
+            </encoder>
+        </appender>
         <root level="WARN">
-            <appender-ref ref="KafkaAppender"/>
+            <!--<appender-ref ref="KafkaAppender"/>-->
             <appender-ref ref="STDOUT"/>
+            <appender-ref ref="FILE"/>
         </root>
     </springProfile>
 

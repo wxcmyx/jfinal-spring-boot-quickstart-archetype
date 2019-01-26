@@ -3,8 +3,10 @@ package ${package}.jfinal.gen;
 import com.jfinal.plugin.activerecord.generator.BaseModelGenerator;
 import com.jfinal.plugin.activerecord.generator.Generator;
 import com.jfinal.plugin.activerecord.generator.ModelGenerator;
+import com.jfinal.plugin.activerecord.generator.TableMeta;
 
 import javax.sql.DataSource;
+import java.util.List;
 
 public class MyGenerator extends Generator {
 
@@ -31,5 +33,14 @@ public class MyGenerator extends Generator {
     public void addIncludedTable(String tableName) {
         MyMetaBuilder builder = (MyMetaBuilder) metaBuilder;
         builder.addIncludedTable(tableName);
+    }
+
+    /**
+     * 获取表信息
+     * @return
+     */
+    public List<TableMeta> geTableList(){
+        MyMetaBuilder builder = (MyMetaBuilder) metaBuilder;
+        return builder.getTableMetas();
     }
 }
