@@ -12,6 +12,11 @@ import java.util.List;
 public class MyMetaBuilder extends MetaBuilder {
 
     private List<String> includedTables = new ArrayList<>();
+    private List<TableMeta> tableMetas = new ArrayList<>();
+
+    public List<TableMeta> getTableMetas() {
+        return tableMetas;
+    }
 
     public MyMetaBuilder(DataSource dataSource) {
         super(dataSource);
@@ -20,7 +25,6 @@ public class MyMetaBuilder extends MetaBuilder {
     public void addIncludedTable(String name) {
         includedTables.add(name);
     }
-
     @Override
     protected void buildTableNames(List<TableMeta> ret) throws SQLException {
         ResultSet rs = getTablesResultSet();
@@ -33,6 +37,7 @@ public class MyMetaBuilder extends MetaBuilder {
 
                 tableMeta.modelName = buildModelName(tableName);
                 tableMeta.baseModelName = buildBaseModelName(tableMeta.modelName);
+                tableMetas.add(tableMeta);
                 ret.add(tableMeta);
             }
         }
