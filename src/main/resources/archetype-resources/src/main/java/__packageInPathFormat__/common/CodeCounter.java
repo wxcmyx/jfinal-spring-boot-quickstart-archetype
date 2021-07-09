@@ -1,4 +1,4 @@
-package ${package}.common;
+package com.wixct.pachong.common;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;

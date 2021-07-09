@@ -28,35 +28,24 @@
     <!-- Properties -->
 
     <properties>
-        <spring-data-releasetrain.version>2.1.1.RELEASE</spring-data-releasetrain.version>
+        <spring-data-releasetrain.version>Fowler-SR2</spring-data-releasetrain.version>
         <java.version>1.8</java.version>
         <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>${java.version}</maven.compiler.source>
         <maven.compiler.target>${java.version}</maven.compiler.target>
 
-        <mysql.version>5.1.20</mysql.version>
-        <HikariCP.version>3.3.0</HikariCP.version>
+        <SpingDateRedis.version>2.3.9.RELEASE</SpingDateRedis.version>
 
-        <SpingDateRedis.version>2.1.1.RELEASE</SpingDateRedis.version>
-        <SpingDateSessionRedis.version>2.1.1.RELEASE</SpingDateSessionRedis.version>
-        <springboot.maven.version>2.1.1.RELEASE</springboot.maven.version>
 
-        <CommonPool2.version>2.5.0</CommonPool2.version>
-        <CommonLang3.version>3.7</CommonLang3.version>
-        <CommonIo.version>2.6</CommonIo.version>
-        <CommonConfig.version>2.4</CommonConfig.version>
-        <CommonDbutil.version>1.7</CommonDbutil.version>
-        <Fastjson.version>1.2.56</Fastjson.version>
-
-        <javamelody.version>1.75.0</javamelody.version>
-        <jfinal.version>3.6</jfinal.version>
+        <jfinal.version>4.9.08</jfinal.version>
         <jfinal-ext3.version>3.0.6</jfinal-ext3.version>
         <guava.version>24.1-jre</guava.version>
 
-        <Swagger.version>2.0.0.RELEASE</Swagger.version>
+        <mysql.version>8.0.23</mysql.version>
+        <HikariCP.version>2.7.8</HikariCP.version>
         <Junit.version>4.12</Junit.version>
-        <Lombok.version>1.16.20</Lombok.version>
+        <Lombok.version>1.18.0</Lombok.version>
         <Contiperf.version>2.3.4</Contiperf.version>
         <Jaxb.version>2.3.0</Jaxb.version>
         <Fst.version>2.57</Fst.version>
@@ -65,7 +54,7 @@
         <jsets-shiro.version>1.0.4</jsets-shiro.version>
         <logback-kafka-appender.version>0.1.0</logback-kafka-appender.version>
         <jsoup.version>1.11.3</jsoup.version>
-        <freemarker.version>2.3.28</freemarker.version>
+
 
     </properties>
 
@@ -86,7 +75,7 @@
             <groupId>javax.servlet</groupId>
             <artifactId>javax.servlet-api</artifactId>
             <version>${Servlet.version}</version>
-            <scope>provided</scope>
+            <!--<scope>provided</scope>-->
         </dependency>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -99,6 +88,11 @@
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-devtools</artifactId>
+            <optional>true</optional>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-aop</artifactId>
         </dependency>
         <!--数据库相关-->
         <dependency>
@@ -110,6 +104,11 @@
             <artifactId>spring-jdbc</artifactId>
         </dependency>
         <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-validation</artifactId>
+        </dependency>
+
+        <dependency>
             <groupId>com.zaxxer</groupId>
             <artifactId>HikariCP</artifactId>
             <version>${HikariCP.version}</version>
@@ -117,20 +116,9 @@
         <dependency>
             <groupId>mysql</groupId>
             <artifactId>mysql-connector-java</artifactId>
-            <version>${mysql.version}</version>
+            <version>8.0.23</version>
         </dependency>
-        <!--权限认证-->
-        <!--<dependency>-->
-            <!--<groupId>org.apache.shiro</groupId>-->
-            <!--<artifactId>shiro-spring-boot-web-starter</artifactId>-->
-            <!--<version>${shiro.version}</version>-->
-        <!--</dependency>-->
-        <dependency>
-            <groupId>org.sidao</groupId>
-            <artifactId>jsets-shiro-spring-boot-starter</artifactId>
-            <version>${jsets-shiro.version}</version>
-        </dependency>
-        <!--cache--><!--redis依赖添加-->
+        <!--redis依赖添加-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-data-redis</artifactId>
@@ -144,7 +132,7 @@
         <dependency>
             <groupId>org.springframework.session</groupId>
             <artifactId>spring-session-data-redis</artifactId>
-            <version>${SpingDateSessionRedis.version}</version>
+            <version>2.1.1.RELEASE</version>
         </dependency>
         <dependency>
             <groupId>org.springframework.data</groupId>
@@ -165,48 +153,31 @@
             <artifactId>ehcache</artifactId>
         </dependency>
         <!--mongodb-->
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-data-mongodb</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>org.springframework.data</groupId>
-            <artifactId>spring-data-mongodb</artifactId>
-            <version>${SpingDateRedis.version}</version>
-        </dependency>
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.boot</groupId>-->
+        <!--<artifactId>spring-boot-starter-data-mongodb</artifactId>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+        <!--<groupId>org.springframework.data</groupId>-->
+        <!--<artifactId>spring-data-mongodb</artifactId>-->
+        <!--<version>${SpingDateRedis.version}</version>-->
+        <!--</dependency>-->
         <!-- common tool -->
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-pool2</artifactId>
-            <version>${CommonPool2.version}</version>
+            <version>2.9.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
             <artifactId>commons-lang3</artifactId>
-            <version>${CommonLang3.version}</version>
+            <version>3.12.0</version>
         </dependency>
+
         <dependency>
             <groupId>commons-io</groupId>
             <artifactId>commons-io</artifactId>
-            <version>${CommonIo.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/org.apache.commons/commons-configuration2 -->
-        <dependency>
-            <groupId>org.apache.commons</groupId>
-            <artifactId>commons-configuration2</artifactId>
-            <version>${CommonConfig.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/commons-dbutils/commons-dbutils -->
-        <dependency>
-            <groupId>commons-dbutils</groupId>
-            <artifactId>commons-dbutils</artifactId>
-            <version>${CommonDbutil.version}</version>
-        </dependency>
-        <!-- https://mvnrepository.com/artifact/com.alibaba/fastjson -->
-        <dependency>
-            <groupId>com.alibaba</groupId>
-            <artifactId>fastjson</artifactId>
-            <version>${Fastjson.version}</version>
+            <version>2.8.0</version>
         </dependency>
 
         <dependency>
@@ -253,7 +224,7 @@
         <dependency>
             <groupId>com.jfinal</groupId>
             <artifactId>jfinal</artifactId>
-            <version>${jfinal.version}</version>
+            <version>4.9.08</version>
         </dependency>
         <dependency>
             <groupId>com.jfinal</groupId>
@@ -264,12 +235,9 @@
         <dependency>
             <groupId>net.bull.javamelody</groupId>
             <artifactId>javamelody-spring-boot-starter</artifactId>
-            <version>${javamelody.version}</version>
+            <version>1.87.0</version>
         </dependency>
-        <dependency>
-            <groupId>org.springframework.boot</groupId>
-            <artifactId>spring-boot-starter-aop</artifactId>
-        </dependency>
+
         <!--actuator-->
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -285,15 +253,15 @@
         </dependency>
         <!--swagger-->
         <dependency>
-            <groupId>org.sidao</groupId>
-            <artifactId>swagger2-spring-boot-starter</artifactId>
-            <version>${Swagger.version}</version>
+            <groupId>com.spring4all</groupId>
+            <artifactId>swagger-spring-boot-starter</artifactId>
+            <version>1.9.1.RELEASE</version>
         </dependency>
 
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-configuration-processor</artifactId>
-            <optional>true</optional>
+            <!--            <optional>true</optional>-->
         </dependency>
         <!--日志输出到kafka-->
         <dependency>
@@ -306,6 +274,34 @@
             <artifactId>logback-kafka-appender</artifactId>
             <version>${logback-kafka-appender.version}</version>
             <scope>runtime</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jsoup</groupId>
+            <artifactId>jsoup</artifactId>
+            <version>${jsoup.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-maven-plugin</artifactId>
+            <version>2.4.5</version>
+        </dependency>
+
+        <!-- 读取后缀为xlsx或xls的excel操作需要导入包 -->
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.poi</groupId>
+            <artifactId>poi-ooxml</artifactId>
+            <version>4.1.2</version>
+        </dependency>
+        <dependency>
+            <groupId>ai.ylyue</groupId>
+            <artifactId>yue-library-web</artifactId>
+            <version>j8.2.3.3</version>
         </dependency>
     </dependencies>
 

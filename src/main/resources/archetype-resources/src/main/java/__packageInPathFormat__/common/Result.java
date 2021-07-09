@@ -1,6 +1,6 @@
-package ${package}.web.rest;
+package com.wixct.pachong.common;
 
-public class Result<T> {
+public class Result {
     public static final int DEFAULT_SUCC_CODE = 0;
     public static final int DEFAULT_FAIL_CODE = 1;
     /**
@@ -22,7 +22,7 @@ public class Result<T> {
     /**
      * 其他数据
      */
-    private T data;
+    private Object data;
 
     /**
      * 成功
@@ -509,11 +509,11 @@ public class Result<T> {
         return this;
     }
 
-    public T getData() {
+    public Object getData() {
         return data;
     }
 
-    public Result setData(T data) {
+    public Result setData(Object data) {
         this.data = data;
         return this;
     }

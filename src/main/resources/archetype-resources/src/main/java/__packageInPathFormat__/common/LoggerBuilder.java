@@ -1,4 +1,4 @@
-package ${package}.common;
+package com.wixct.pachong.common;
 import ch.qos.logback.classic.Level;
 import ch.qos.logback.classic.Logger;
 import ch.qos.logback.classic.LoggerContext;
@@ -13,6 +13,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 /**
+ * 特殊信息记录到特定的.log文件
  * @author fenglei
  */
 public class LoggerBuilder {
@@ -34,6 +35,11 @@ public class LoggerBuilder {
         return logger;
     }
 
+    /**
+     * @param name ${LOG_HOME}目录下的，文件名，以.log结尾
+     * @param clazz 类
+     * @return
+     */
     private static Logger build(String name,Class<?> clazz) {
         LoggerContext context = (LoggerContext) LoggerFactory.getILoggerFactory();
         Logger logger = context.getLogger(name);

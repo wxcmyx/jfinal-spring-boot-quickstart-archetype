@@ -1,4 +1,4 @@
-package ${package}.common;
+package com.wixct.pachong.common;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;

@@ -1,99 +1,55 @@
-Jfinal Spring Boot Quickstart Maven Archetype
-=========================================
+# pachong
 
-[![Build Status](https://travis-ci.org/suzel/spring-boot-quickstart-archetype.svg?branch=master)](https://travis-ci.org/suzel/spring-boot-quickstart-archetype)
-[![License Status](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/suzel/spring-boot-quickstart-archetype/master/LICENSE)
+#### 介绍
+学习用，springboot+jfinal 可用于爬取网页信息
 
-Summary
--------
-The project is a Maven archetype for Spring Boot web application.
+#### 软件架构
+软件架构说明
 
-后续更新分拆成两个版本：<br>
-专注rest服务的<br>
-jfinal-spring-boot-quickstart-archetype<br>
-整和了layui的<br>
-jfinal-cms-spring-boot-quickstart-archetype
 
-Descript
--------
-整合框架：<br>
+#### 安装教程
 
-Spring-boot 2.0.3 <br>
-Jfinal 3.4<br>
-Jfinal-ext 3.0.6<br>
-Shiro - Shiro-spring-boot-strator-1.4.0<br>
-Redis - Lettuce-5.0.4<br>
-Mongo-java-driver-3.6.4<br>
-Mysql-connector-java-5.1.20<br>
-Mysql - HikariCP-2.7.8<br>
-Swagger - Swagger2-spring-boot-strater-2.0.0<br>
-Javamelody - javamelody-spring-boot-starter-1.73.1<br>
+1.  xxxx
+2.  xxxx
+3.  xxxx
 
-Update log
--------------------
-v2.1.2 <br>
-1.专注rest微服务架构，专注最佳实践<br>
-2.加入shiro认证<br>
-3.加入session缓存
+#### 使用说明
 
-Pre Installation(optional)
-------------
-此选项可以加快构建速度
-```
-http://repo2.maven.org/maven2/archetype-catalog.xml
-```
-将archetype-catalog.xml文件放到~/用户名/.m2/ 目录下
+1.  xxxx
+2.  xxxx
+3.  xxxx
 
-Installation
-------------
+#### 参与贡献
 
-To install the archetype in your local repository execute following commands:
+1.  Fork 本仓库
+2.  新建 Feat_xxx 分支
+3.  提交代码
+4.  新建 Pull Request
 
-```sh
-$ git clone https://github.com/wxcmyx/jfinal-spring-boot-quickstart-archetype.git
-$ cd jfinal-spring-boot-quickstart-archetype
-$ mvn clean install
-```
 
-Create a project
-----------------
+#### 特技
 
-```sh
-$ mvn archetype:generate \
-     -DarchetypeGroupId=com.wixct \
-     -DarchetypeArtifactId=jfinal-spring-boot-quickstart \
-     -DarchetypeVersion=2.1.3 \
-     -DgroupId=xxxxx \
-     -Dpackage=com.company \
-     -DartifactId=xxxxxx \
-     -Dversion=1.0.0-SNAPSHOT \
-     -DinteractiveMode=false
-```
-如果使用了Pre Installation，需要在上面代码的基础上再补充上
-```
--DarchetypeCatalog=local
-```
+1.  使用 Readme\_XXX.md 来支持不同的语言，例如 Readme\_en.md, Readme\_zh.md
+2.  Gitee 官方博客 [blog.gitee.com](https://blog.gitee.com)
+3.  你可以 [https://gitee.com/explore](https://gitee.com/explore) 这个地址来了解 Gitee 上的优秀开源项目
+4.  [GVP](https://gitee.com/gvp) 全称是 Gitee 最有价值开源项目，是综合评定出的优秀开源项目
+5.  Gitee 官方提供的使用手册 [https://gitee.com/help](https://gitee.com/help)
+6.  Gitee 封面人物是一档用来展示 Gitee 会员风采的栏目 [https://gitee.com/gitee-stars/](https://gitee.com/gitee-stars/)
 
-Run the project
-----------------
 
-```sh
-$ mvn test spring-boot:run
-```
+#### 执行打包
+mvn clean package  -Dmaven.test.skip=true
+  
+#### 通过命令获取源代码或者帮助文档
+mvn dependency:resolve -Dclassifier=sources
 
-Test on the browser
--------------------
+#### 查看性能监测
+http://localhost:8082/github/admin/performance
+https://wixct.com/github/admin/performance
 
-```sh
-http://localhost:8080/api/hello
-```
+#### 查看swagger文档
+http://localhost:8082/github/swagger-ui.html
 
-Note: No additional services are required in order to start the application.
-
-Document
----------
-修改shiro权限认证方式，可能需要修改的几个包：<br>
-xx.config<br>
-xx.domain<br>
-xx.security<br>
-xx.service
+ssh root@114.116.17.251
+#### 拷贝文件命令
+scp ./target/pachong-1.0.0-SNAPSHOT.jar root@114.116.17.251:/softs/pachong
