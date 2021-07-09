@@ -1,4 +1,4 @@
-package com.wixct.pachong.config;
+${package}config;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;

@@ -1,4 +1,4 @@
-package com.wixct.pachong.common;
+package ${package}.common;
 
 public class Result {
     public static final int DEFAULT_SUCC_CODE = 0;

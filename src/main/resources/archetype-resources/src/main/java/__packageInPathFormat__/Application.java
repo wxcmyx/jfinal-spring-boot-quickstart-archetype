@@ -1,6 +1,6 @@
 package ${package};
 
-import org.sidao.swagger.EnableSwagger2Doc;
+
 import org.springframework.boot.Banner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

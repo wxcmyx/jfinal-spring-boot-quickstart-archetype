@@ -1,4 +1,4 @@
-package com.wixct.pachong.jfinal.gen;
+${package}jfinal.gen;
 
 import com.jfinal.kit.PathKit;
 import com.jfinal.kit.Prop;

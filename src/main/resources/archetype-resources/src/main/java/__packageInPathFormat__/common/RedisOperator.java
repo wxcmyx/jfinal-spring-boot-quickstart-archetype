@@ -1,4 +1,4 @@
-package com.wixct.pachong.common;
+package ${package}.common;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.StringRedisTemplate;

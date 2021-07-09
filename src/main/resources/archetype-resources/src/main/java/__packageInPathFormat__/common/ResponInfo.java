@@ -1,4 +1,4 @@
-package com.wixct.pachong.common;
+package ${package}.common;
 
 import lombok.Data;
 

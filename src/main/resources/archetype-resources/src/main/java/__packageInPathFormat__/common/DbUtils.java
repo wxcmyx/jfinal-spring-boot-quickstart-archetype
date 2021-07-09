@@ -1,7 +1,7 @@
 /**
- * 
+ *
  */
-package com.wixct.pachong.common;
+package ${package}.common;
 
 
 
@@ -10,7 +10,7 @@ import com.jfinal.kit.PropKit;
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
 import com.jfinal.plugin.hikaricp.HikariCpPlugin;
-import com.wixct.pachong.jfinal.model._MappingKit;
+import ${package}.jfinal.model._MappingKit;
 
 /**
  * @author wxc

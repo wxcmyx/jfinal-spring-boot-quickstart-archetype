@@ -1,4 +1,4 @@
-package com.wixct.pachong.jfinal.ext;
+${package}jfinal.ext;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;

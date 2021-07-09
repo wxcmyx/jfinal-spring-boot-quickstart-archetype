@@ -1,4 +1,4 @@
-package com.wixct.pachong.jfinal.gen;
+${package}jfinal.gen;
 
 import com.jfinal.plugin.activerecord.generator.BaseModelGenerator;
 import com.jfinal.plugin.activerecord.generator.Generator;

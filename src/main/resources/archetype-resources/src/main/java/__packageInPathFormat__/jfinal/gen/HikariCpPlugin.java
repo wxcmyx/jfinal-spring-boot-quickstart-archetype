@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.wixct.pachong.jfinal.gen;
+${package}jfinal.gen;
 
 import com.jfinal.kit.Prop;
 import com.jfinal.kit.PropKit;

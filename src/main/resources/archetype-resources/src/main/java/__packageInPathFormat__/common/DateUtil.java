@@ -1,4 +1,4 @@
-package com.wixct.pachong.common;
+package ${package}.common;
 
 import java.sql.Time;
 import java.text.DateFormat;
@@ -13,10 +13,10 @@ import java.util.List;
 import org.apache.commons.lang3.StringUtils;
 
 public class DateUtil {
-	
+
 	/**
 	 * 功能描述：格式化日期
-	 * 
+	 *
 	 * @param dateStr
 	 *            String 字符型日期
 	 * @param format
@@ -34,7 +34,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：格式化日期
-	 * 
+	 *
 	 * @param dateStr
 	 *            String 字符型日期：YYYY/MM/DD 格式
 	 * @return Date
@@ -55,7 +55,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：格式化输出日期
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @param format
@@ -76,7 +76,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return
@@ -87,7 +87,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回年份
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回年份
@@ -100,7 +100,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回月份
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回月份
@@ -113,7 +113,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回日份
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回日份
@@ -126,7 +126,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回小时
-	 * 
+	 *
 	 * @param date
 	 *            日期
 	 * @return 返回小时
@@ -138,11 +138,11 @@ public class DateUtil {
 	}
 	/**
 	 * 功能描述：加上一小时
-	 * 
+	 *
 	 * @param date
 	 *            日期
 	 * @return 返回Date
-	 * @throws ParseException 
+	 * @throws ParseException
 	 */
 	public static Date addOneHour(Date date)  {
 		SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -157,9 +157,9 @@ public class DateUtil {
 		}
 		return date;
 	}
-	
-	
-	
+
+
+
 	//加一天
 	public static Date addOneDay(Date date)  {
 		SimpleDateFormat formater = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
@@ -175,60 +175,60 @@ public class DateUtil {
 		return date;
 	}
 
-	
-	 /** 
-     * 根据开始时间和结束时间返回时间段内的时间集合 
-     *  
-     * @param beginDate 
-     * @param endDate 
-     * @return List 
-     */  
-    public static List<Date> getDatesBetweenTwoDate(Date beginDate, Date endDate) {  
-        List<Date> lDate = new ArrayList<Date>();  
-        	 lDate.add(beginDate);// 把开始时间加入集合  
-        Calendar cal = Calendar.getInstance();  
-        // 使用给定的 Date 设置此 Calendar 的时间  
-        cal.setTime(beginDate);  
-        boolean bContinue = true;  
-        while (bContinue) {  
-            // 根据日历的规则，为给定的日历字段添加或减去指定的时间量  
-            cal.add(Calendar.DAY_OF_MONTH, 1);  
-            // 测试此日期是否在指定日期之后  
-            if (endDate.after(cal.getTime())) {  
-                lDate.add(cal.getTime());  
-            } else {  
-                break;  
-            }  
-        } 
-        	lDate.add(endDate);// 把结束时间加入集合  
-        	
-        return lDate;  
-    }  
-    
-    
-    public static List<Date> getDatesBetweenTwoDate2(Date beginDate, Date endDate) {  
-        List<Date> lDate = new ArrayList<Date>();  
-        lDate.add(beginDate);// 把开始时间加入集合  
-        Calendar cal = Calendar.getInstance();  
-        // 使用给定的 Date 设置此 Calendar 的时间  
-        cal.setTime(beginDate);  
-        boolean bContinue = true;  
-        while (bContinue) {  
-            // 根据日历的规则，为给定的日历字段添加或减去指定的时间量  
-            cal.add(Calendar.DAY_OF_MONTH, 1);  
-            // 测试此日期是否在指定日期之后  
-            if (endDate.after(cal.getTime())) {  
-                lDate.add(cal.getTime());  
-            } else {  
-                break;  
-            }  
-        }  
-        //lDate.add(endDate);// 把结束时间加入集合  
-        return lDate;  
-    } 
+
+	 /**
+     * 根据开始时间和结束时间返回时间段内的时间集合
+     *
+     * @param beginDate
+     * @param endDate
+     * @return List
+     */
+    public static List<Date> getDatesBetweenTwoDate(Date beginDate, Date endDate) {
+        List<Date> lDate = new ArrayList<Date>();
+        	 lDate.add(beginDate);// 把开始时间加入集合
+        Calendar cal = Calendar.getInstance();
+        // 使用给定的 Date 设置此 Calendar 的时间
+        cal.setTime(beginDate);
+        boolean bContinue = true;
+        while (bContinue) {
+            // 根据日历的规则，为给定的日历字段添加或减去指定的时间量
+            cal.add(Calendar.DAY_OF_MONTH, 1);
+            // 测试此日期是否在指定日期之后
+            if (endDate.after(cal.getTime())) {
+                lDate.add(cal.getTime());
+            } else {
+                break;
+            }
+        }
+        	lDate.add(endDate);// 把结束时间加入集合
+
+        return lDate;
+    }
+
+
+    public static List<Date> getDatesBetweenTwoDate2(Date beginDate, Date endDate) {
+        List<Date> lDate = new ArrayList<Date>();
+        lDate.add(beginDate);// 把开始时间加入集合
+        Calendar cal = Calendar.getInstance();
+        // 使用给定的 Date 设置此 Calendar 的时间
+        cal.setTime(beginDate);
+        boolean bContinue = true;
+        while (bContinue) {
+            // 根据日历的规则，为给定的日历字段添加或减去指定的时间量
+            cal.add(Calendar.DAY_OF_MONTH, 1);
+            // 测试此日期是否在指定日期之后
+            if (endDate.after(cal.getTime())) {
+                lDate.add(cal.getTime());
+            } else {
+                break;
+            }
+        }
+        //lDate.add(endDate);// 把结束时间加入集合
+        return lDate;
+    }
 	/**
 	 * 功能描述：返回分钟
-	 * 
+	 *
 	 * @param date
 	 *            日期
 	 * @return 返回分钟
@@ -241,7 +241,7 @@ public class DateUtil {
 
 	/**
 	 * 返回秒钟
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回秒钟
@@ -254,7 +254,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回毫秒
-	 * 
+	 *
 	 * @param date
 	 *            日期
 	 * @return 返回毫秒
@@ -267,7 +267,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回字符型日期
-	 * 
+	 *
 	 * @param date
 	 *            日期
 	 * @return 返回字符型日期 yyyy/MM/dd 格式
@@ -278,7 +278,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回字符型时间
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回字符型时间 HH:mm:ss 格式
@@ -289,7 +289,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：返回字符型日期时间
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @return 返回字符型日期时间 yyyy/MM/dd HH:mm:ss 格式
@@ -300,7 +300,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：日期相加
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @param day
@@ -316,7 +316,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：日期相减
-	 * 
+	 *
 	 * @param date
 	 *            Date 日期
 	 * @param date1
@@ -329,7 +329,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：取得指定月份的第一天
-	 * 
+	 *
 	 * @param strdate
 	 *            String 字符型日期
 	 * @return String yyyy-MM-dd 格式
@@ -341,7 +341,7 @@ public class DateUtil {
 
 	/**
 	 * 功能描述：取得指定月份的最后一天
-	 * 
+	 *
 	 * @param strdate
 	 *            String 字符型日期
 	 * @return String 日期字符串 yyyy-MM-dd格式
@@ -354,7 +354,7 @@ public class DateUtil {
 		calendar.add(Calendar.DAY_OF_YEAR, -1);
 		return formatDate(calendar.getTime());
 	}
-	
+
 	/**
 	 * 获得一天的开始时间
 	 * @param date
@@ -370,7 +370,7 @@ public class DateUtil {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 获得一天的结束时间
 	 * @param date
@@ -407,7 +407,7 @@ public class DateUtil {
 		return null;
 	}
 
-	
+
 	/**
 	 * 获得本月的开始时间
 	 * @param date
@@ -488,10 +488,10 @@ public class DateUtil {
 		return result;
 	}
 
-	 
+
 	/**
 	 * 根据一个日期，返回其以星期一为一周的第一天的一周的第一天日期对象，精确到毫秒即yyyy-MM-dd 00:00:00.000
-	 * 
+	 *
 	 * @param date
 	 * @return
 	 */
@@ -508,15 +508,15 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis());
 	}
-	
+
 	/**
 	 * 根据一个日期，返回其以星期一为一周的第一天的一周的最后一天日期对象，精确到毫秒即yyyy-MM-dd 23:59:59.999
-	 * 
+	 *
 	 * @param date
 	 * @return
 	 */
 	public static Date getEndOfMondayFirstWeek(Date date) {
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.setFirstDayOfWeek(Calendar.MONDAY);
 		cal.setTime(date);
@@ -528,15 +528,15 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis());
 	}
-	
+
 	/**
 	 * 通过一个给定的年获取这一年的开始时间，精确到毫秒，yyyy-01-01 00:00:00.000
-	 * 
+	 *
 	 * @param year
 	 * @return
 	 */
 	public static Date getBeginOfYear(int year){
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, Calendar.JANUARY);
@@ -548,15 +548,15 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis());
 	}
-	
+
 	/**
 	 * 通过一个给定的年获取这一年的结束时间，精确到毫秒，yyyy-12-31 23:59:59.999
-	 * 
+	 *
 	 * @param year
 	 * @return
 	 */
 	public static Date getEndOfYear(int year){
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, Calendar.DECEMBER);
@@ -568,15 +568,15 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis());
 	}
-	
+
 	/**
 	 * 通过一个给定的年和月（从0～11）获取这一月的开始时间，精确到毫秒，yyyy-MM-01 00:00:00.000
-	 * 
+	 *
 	 * @param year
 	 * @return
 	 */
 	public static Date getBeginOfMonth(int year, int Month){
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, Month);
@@ -588,15 +588,15 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis());
 	}
-	
+
 	/**
 	 * 通过一个给定的年和月（从0～11）获取这一月的结束时间，精确到毫秒，yyyy-MM-31 23:59:59.999
-	 * 
+	 *
 	 * @param year
 	 * @return
 	 */
 	public static Date getEndOfMonth(int year, int Month){
-		
+
 		Calendar cal = Calendar.getInstance();
 		cal.set(Calendar.YEAR, year);
 		cal.set(Calendar.MONTH, Month + 1);
@@ -608,7 +608,7 @@ public class DateUtil {
 
 		return new Date(cal.getTimeInMillis() - 1);
 	}
-	
+
 	/**
 	 * 获得几天前的开始时间
 	 * @param date
@@ -627,7 +627,7 @@ public class DateUtil {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 获得几天后的开始时间
 	 * @param date
@@ -646,7 +646,7 @@ public class DateUtil {
 		}
 		return result;
 	}
-	
+
 	/**
 	 * 获得几分钟前的开始时间
 	 * @param date
@@ -657,8 +657,8 @@ public class DateUtil {
 		Date result = new Date(time);
 		return result;
 	}
-	
-	
+
+
 	/**
 	 * 获得几秒钟前的开始时间
 	 * @param date
@@ -669,40 +669,40 @@ public class DateUtil {
 		Date result = new Date(time);
 		return result;
 	}
-	
+
 	public static Date get19700101Date(Date date){
-		
+
 		Calendar calendar = Calendar.getInstance();
 		calendar.setTime(date);
 		calendar.set(1970, 0, 1);
 		return calendar.getTime();
 	}
-	
+
 	public static Time get19700101Time(Time time){
 
 		return new Time(get19700101Date(time).getTime());
 	}
-	
+
 	public static Date get19700101NowDate(){
 
 		return get19700101Date(new Date());
 	}
-	
+
 	public static Time get19700101NowTime(){
-		
+
 		return new Time(get19700101NowDate().getTime());
 	}
-	
+
 	public static Time get19700101BeginTime(){
-		
+
 		return new Time(getBeginOfDay(get19700101NowDate()).getTime());
 	}
-	
+
 	public static Time get19700101EndTime(){
-		
+
 		return new Time(getEndOfDay(get19700101NowDate()).getTime());
 	}
-	
+
 	public static void main(String[] args) throws ParseException{
 		System.out.println(getBeginOfDay(new Date()).getTime());
 	}
