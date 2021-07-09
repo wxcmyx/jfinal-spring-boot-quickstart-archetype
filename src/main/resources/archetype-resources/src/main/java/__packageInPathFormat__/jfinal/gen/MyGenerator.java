@@ -1,4 +1,4 @@
-${package}.jfinal.gen;
+package ${package}.jfinal.gen;
 
 import com.jfinal.plugin.activerecord.generator.BaseModelGenerator;
 import com.jfinal.plugin.activerecord.generator.Generator;

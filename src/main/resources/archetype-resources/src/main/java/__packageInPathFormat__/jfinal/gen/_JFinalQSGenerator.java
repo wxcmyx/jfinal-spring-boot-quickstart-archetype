@@ -1,4 +1,4 @@
-${package}.jfinal.gen;
+package ${package}.jfinal.gen;
 
 import com.jfinal.kit.PathKit;
 import com.jfinal.kit.Prop;

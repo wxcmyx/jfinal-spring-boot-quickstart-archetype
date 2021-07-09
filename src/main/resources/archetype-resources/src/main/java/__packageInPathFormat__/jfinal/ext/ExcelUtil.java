@@ -1,4 +1,4 @@
-${package}.jfinal.ext;
+package ${package}.jfinal.ext;
 
 import org.apache.log4j.Logger;
 import org.apache.poi.hssf.usermodel.HSSFCell;

@@ -1,4 +1,4 @@
-${package}.jfinal.ext;
+package ${package}.jfinal.ext;
 
 import org.apache.commons.io.FileUtils;
 import org.apache.poi.hssf.usermodel.HSSFCell;
