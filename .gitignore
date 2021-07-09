@@ -26,3 +26,5 @@ src/main/resources/archetype-resources/src/main/resources/templates/
 .settings
 .idea
 target
+/.settings/
+/.idea/
