@@ -1,4 +1,4 @@
-${package}config;
+${package}.config;
 
 import java.util.concurrent.Executor;
 

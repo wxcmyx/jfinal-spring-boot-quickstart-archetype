@@ -1,4 +1,4 @@
-${package}jfinal.ext;
+${package}.jfinal.ext;
 
 import org.apache.poi.ss.usermodel.DateUtil;
 import org.apache.poi.xssf.usermodel.XSSFCell;

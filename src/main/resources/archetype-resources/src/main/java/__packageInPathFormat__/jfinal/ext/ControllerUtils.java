@@ -1,4 +1,4 @@
-${package}jfinal.ext;
+${package}.jfinal.ext;
 
 import com.jfinal.core.Controller;
 import com.jfinal.kit.StrKit;
