@@ -1,3 +1,4 @@
+#set( $symbol_pound = '#' )
 package ${package}.jfinal.ext;
 
 import org.apache.log4j.Logger;
@@ -47,7 +48,7 @@ public class ExcelUtil {
                 Date date = HSSFDateUtil.getJavaDate(hssfCell.getNumericCellValue());
                 cellValue = sdf.format(date);
             }else{
-                DecimalFormat df = new DecimalFormat("#.##");
+                DecimalFormat df = new DecimalFormat("$symbol_pound.$symbol_pound$symbol_pound");
                 cellValue = df.format(hssfCell.getNumericCellValue());
                 String strArr = cellValue.substring(cellValue.lastIndexOf(POINT)+1,cellValue.length());
                 if(strArr.equals("00")){

@@ -10,9 +10,6 @@ import ${package}.jfinal.ext.ControllerUtils;
 import ${package}.common.Result;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
-import org.springframework.data.mongodb.core.MongoTemplate;
-import org.springframework.data.mongodb.core.query.Criteria;
-import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.data.redis.core.StringRedisTemplate;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -33,8 +30,8 @@ public class DbDemoController {
     @Autowired
     StringRedisTemplate stringRedisTemplate;
 
-    @Autowired
-    MongoTemplate mongoTemplate;
+//    @Autowired
+//    MongoTemplate mongoTemplate;
 
     @ApiOperation("获取项目总数")
     @GetMapping("/api/hello")
@@ -63,16 +60,16 @@ public class DbDemoController {
         Page<Record> gitpages= Db.use("ds1").paginate( pageIndex,pageSize,"select a.*,(select b.count from openopen b where a.update=b.date) count ","from githubproject a");
         return new Result().setData(ControllerUtils.recordsToCamelCaseMaps(gitpages));
     }
-    @ApiOperation("如何使用mongodb")
-    @GetMapping("/api/mongouse")
-    @ResponseBody
-    public Object mongouse(){
-        mongoTemplate.save(new Result().setData("aaaa"),"test1");
-        Query query=new Query(Criteria.where("code").is(0));
-        Result result = mongoTemplate.findOne(query,Result.class,"test1");
-        if(null == result){
-            result=new Result().setCode(1).setErcode("11");
-        }
-        return result;
-    }
+//    @ApiOperation("如何使用mongodb")
+//    @GetMapping("/api/mongouse")
+//    @ResponseBody
+//    public Object mongouse(){
+//        mongoTemplate.save(new Result().setData("aaaa"),"test1");
+//        Query query=new Query(Criteria.where("code").is(0));
+//        Result result = mongoTemplate.findOne(query,Result.class,"test1");
+//        if(null == result){
+//            result=new Result().setCode(1).setErcode("11");
+//        }
+//        return result;
+//    }
 }

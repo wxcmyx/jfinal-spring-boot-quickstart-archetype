@@ -1,4 +1,4 @@
-${package}common;
+package ${package}common;
 
 import com.google.common.base.Joiner;
 import com.google.common.base.Strings;

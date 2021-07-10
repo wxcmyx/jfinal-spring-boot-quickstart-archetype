@@ -2,7 +2,7 @@ package ${package}.config;
 
 import com.jfinal.plugin.activerecord.ActiveRecordPlugin;
 import com.jfinal.plugin.activerecord.dialect.MysqlDialect;
-import com.wixct.pachong.jfinal.model._MappingKit;
+import ${package}.jfinal.model._MappingKit;
 import com.zaxxer.hikari.HikariDataSource;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
@@ -11,7 +11,7 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.context.annotation.DependsOn;
 import org.springframework.context.annotation.Primary;
-import com.wixct.pachong.jfinal.model._MappingKit2;
+import ${package}.jfinal.model._MappingKit2;
 
 import javax.sql.DataSource;
 
